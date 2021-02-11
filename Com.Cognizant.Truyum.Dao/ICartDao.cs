@@ -10,7 +10,7 @@ namespace Com.Cognizant.Truyum.Dao
     interface ICartDao
     {
         void AddCartItem(long userId, long menuItemId);
-        Cart GetAllCartItems(long userId);  //Cart raises CartEmptyException
+        Cart GetAllCartItems(long userId);  
         void RemoveCartItem(long userId, long productId);
     }
 }

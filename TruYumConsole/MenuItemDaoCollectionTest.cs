@@ -63,7 +63,7 @@ namespace TruYumConsole
             MenuItemDaoCollection menuItemDao = new MenuItemDaoCollection();
             menuItemDao.ModifyMenuItem(menuItem);
             Console.WriteLine("|  ID |  Name      |      Price  |  Active |  Date Of Launch |  Category  |  Delivery  |");
-            Console.WriteLine(menuItemDao.GetMenuItem(menuItem.Id));
+            //Console.WriteLine(menuItemDao.GetMenuItem(menuItem.Id));
             Console.WriteLine(menuItemDao.GetMenu(menuItem.Id));
 
             //MenuItem menuItem;

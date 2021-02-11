@@ -53,7 +53,7 @@ namespace Com.Cognizant.Truyum.Dao
         }
         public MenuItem GetMenu(long menuItemId)
         {
-            return new MenuItem();
+            return MenuItemList.Where(i => i.Id == menuItemId).FirstOrDefault();
 
         }
 

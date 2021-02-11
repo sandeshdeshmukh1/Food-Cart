@@ -38,7 +38,7 @@ namespace TruYumConsole
             }
             var totalCartAmount = menuItems.Sum(i => i.Price);
             Console.WriteLine();
-            Console.WriteLine($"Total Cart Amount  -\u20B9{totalCartAmount}");
+            Console.WriteLine($"Total Cart Amount : \u20B9{totalCartAmount}");
             
         }
         public void TestRemoveCartItem()
