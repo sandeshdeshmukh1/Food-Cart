@@ -9,6 +9,8 @@ namespace Com.Cognizant.Truyum.Dao
 {
     interface ImovieItemDao
     {
+        List<MovieItem> MovieItemList { get; set; }
+
         List<MovieItem> GetMovieItemListAdmin();
         List<MovieItem> GetMovieItemListCustomer();
         void ModifyMovieItem(MovieItem MovieItem);

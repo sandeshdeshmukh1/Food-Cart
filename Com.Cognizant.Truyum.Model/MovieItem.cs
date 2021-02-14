@@ -16,19 +16,19 @@ namespace Com.Cognizant.Truyum.Model
             set { id = value; }
         }
 
-        private string name;
-        public string Name
+        private string title;
+        public string Title
         {
-            get { return name; }
-            set { name = value; }
+            get { return title; }
+            set { title = value; }
         }
 
-        private float price;
+        private float boxoffice;
 
-        public float Price
+        public float BoxOffice
         {
-            get { return price; }
-            set { price = value; }
+            get { return boxoffice; }
+            set { boxoffice = value; }
         }
 
         private bool active;
@@ -49,35 +49,35 @@ namespace Com.Cognizant.Truyum.Model
         }
 
 
-        private string category;
+        private string genre;
 
-        public string Category
+        public string Genre
         {
-            get { return category; }
-            set { category = value; }
+            get { return genre; }
+            set { genre = value; }
         }
 
-        private bool freeDelivery;
+        private bool hasTeaser;
 
-        public bool FreeDelivery
+        public bool HasTeaser
         {
-            get { return freeDelivery; }
-            set { freeDelivery = value; }
+            get { return hasTeaser; }
+            set { hasTeaser = value; }
         }
 
         public MovieItem()
         {
         }
 
-        public MovieItem(long id, string name, float price, bool active, DateTime dateOfLaunch, string category, bool freeDelivery)
+        public MovieItem(long id, string title, float boxoffice, bool active, DateTime dateOfLaunch, string genre, bool hasTeaser)
         {
             Id = id;
-            Name = name;
-            Price = price;
+            Title = title;
+            BoxOffice = boxoffice;
             Active = active;
             DateOfLauch = dateOfLaunch;
-            Category = category;
-            FreeDelivery = freeDelivery;
+            Genre = genre;
+            HasTeaser = hasTeaser;
         }
 
 
@@ -87,7 +87,7 @@ namespace Com.Cognizant.Truyum.Model
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string active = Active == true ? "Yes" : "No";
-            return $"{Id,5} {Name,-20} \u20B9{Price,3} {active,10} {DateOfLauch.ToShortDateString(),15} {Category,15} {FreeDelivery,10}";
+            return $"{Id,5} {Title,-20} \u20B9{BoxOffice,3} {active,10} {DateOfLauch.ToShortDateString(),15} {Genre,15} {HasTeaser,10}";
         }
 
         public override bool Equals(object obj)

@@ -20,7 +20,7 @@ namespace Com.Cognizant.Truyum.Dao
        
         public void AddFavoriteItem(long userId, long MovieItemId)
         {
-            movieItemDaoCollection movieItemDao = new movieItemDaoCollection();
+            MovieItemDaoCollection movieItemDao = new MovieItemDaoCollection();
             MovieItem item = movieItemDao.GetMovieItem(MovieItemId);
             if(userFavorites.ContainsKey(userId))
             {
@@ -45,7 +45,7 @@ namespace Com.Cognizant.Truyum.Dao
             {
                 throw new FavoriteEmptyException("Favorite is empty");
             }
-            double total = Favorite.MovieItemList.Sum(i => i.Price);
+            double total = Favorite.MovieItemList.Sum(i => i.BoxOffice);
             Favorite.Total = total;
             return Favorite;
         }

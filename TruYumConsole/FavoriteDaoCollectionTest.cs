@@ -36,7 +36,7 @@ namespace TruYumConsole
             {
                 Console.WriteLine(item);
             }
-            var totalFavoriteAmount = MovieItems.Sum(i => i.Price);
+            var totalFavoriteAmount = MovieItems.Sum(i => i.BoxOffice);
             Console.WriteLine();
             Console.WriteLine($"Total Favorite Amount : \u20B9{totalFavoriteAmount}");
             

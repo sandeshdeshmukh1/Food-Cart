@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace Com.Cognizant.Truyum.Dao
 {
-    public class movieItemDaoCollection : ImovieItemDao
+    public class MovieItemDaoCollection : ImovieItemDao
     {
-        static List<MovieItem> MovieItemList;
+        static List<MovieItem> movieItemList;
 
         public List<MovieItem> MovieItemList
         {
-            get { return MovieItemList; }
-            set { MovieItemList = value; }
+            get { return movieItemList; }
+            set { movieItemList = value; }
         }
 
 
       
 
-        public movieItemDaoCollection()
+        public MovieItemDaoCollection()
         {
             DateUtility dateUtility = new DateUtility();
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -29,20 +29,20 @@ namespace Com.Cognizant.Truyum.Dao
             {
                 MovieItemList = new List<MovieItem>()
                 {
-                    new MovieItem { Id = 1, Name = "Sandwich", Price = 99F, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("15/03/2017"), Category = "Main Course", FreeDelivery = true },
-                    new MovieItem { Id = 2, Name = "Burger", Price = 129F, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("23/12/2017"), Category = "Main Course", FreeDelivery = false },
-                    new MovieItem { Id = 3, Name = "Pizza", Price = 149F, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("21/08/2018"), Category = "Main Course", FreeDelivery = false },
-                    new MovieItem { Id = 4, Name = "French Fries", Price = 57F, Active = false, DateOfLauch = dateUtility.ConvertToShortDateString("02/07/2017"), Category = "Starters", FreeDelivery = true },
-                    new MovieItem { Id = 5, Name = "Chocolate Brownie", Price = 32F, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("02/11/2022"), Category = "Starters", FreeDelivery = true }
+                    new MovieItem { Id = 1, Title = "Avatar", BoxOffice = 2787965087, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("15/03/2017"), Genre = "Science Fiction", HasTeaser = true },
+                    new MovieItem { Id = 2, Title = "The Avengers", BoxOffice = 15188812988, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("23/12/2017"), Genre = "Romance", HasTeaser = false },
+                    new MovieItem { Id = 3, Title = "Titanic", BoxOffice = 2187463944, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("21/08/2018"), Genre = "Romance", HasTeaser = false },
+                    new MovieItem { Id = 4, Title = "Jurassic World", BoxOffice = 16548713525, Active = false, DateOfLauch = dateUtility.ConvertToShortDateString("02/07/2017"), Genre = "Superhero", HasTeaser = true },
+                    new MovieItem { Id = 5, Title = "Avengers:End Game", BoxOffice = 2750760348, Active = true, DateOfLauch = dateUtility.ConvertToShortDateString("02/11/2022"), Genre = "Science Fiction", HasTeaser = true }
                 };
             };
         }
 
-        public MovieItem GetMovieItem(long MovieItemId)
+        public MovieItem GetMovieItem(long movieItemId)
         {
             foreach (var item in MovieItemList)
             {
-                if (item.Id == MovieItemId)
+                if (item.Id == movieItemId)
                 {
                     return item;
                 }
@@ -51,9 +51,9 @@ namespace Com.Cognizant.Truyum.Dao
 
 
         }
-        public MovieItem GetMenu(long MovieItemId)
+        public MovieItem GetMovie(long movieItemId)
         {
-            return MovieItemList.Where(i => i.Id == MovieItemId).FirstOrDefault();
+            return MovieItemList.Where(i => i.Id == movieItemId).FirstOrDefault();
 
         }
 
@@ -67,19 +67,19 @@ namespace Com.Cognizant.Truyum.Dao
 
         {
 
-            List<MovieItem> MovieItems = new List<MovieItem>();
-            foreach (var item in MovieItemList)
+            List<MovieItem> movieItems = new List<MovieItem>();
+            foreach (var item in movieItemList)
             {
                 if (!(item.DateOfLauch > DateTime.Today) && item.Active == true)
                 {
-                    MovieItems.Add(item);
+                    movieItems.Add(item);
                 }
             }
-            return MovieItems;
+            return movieItems;
            
         }
 
-        public void ModifyMovieItem(MovieItem MovieItem)
+        public void ModifyMovieItem(MovieItem movieItem)
         {
             //for (int i = 0; i < MovieItemList.Count; i++)
             //{
@@ -88,13 +88,13 @@ namespace Com.Cognizant.Truyum.Dao
             //        MovieItemList[i] = MovieItem;
             //    }
             //}
-            MovieItem item = MovieItemList.Where(i => i.Id == MovieItem.Id).FirstOrDefault();
-            item.Name = MovieItem.Name;
-            item.Price = MovieItem.Price;
-            item.Active = MovieItem.Active;
-            item.DateOfLauch = MovieItem.DateOfLauch;
-            item.Category = MovieItem.Category;
-            item.FreeDelivery = MovieItem.FreeDelivery;
+            MovieItem item = MovieItemList.Where(i => i.Id == movieItem.Id).FirstOrDefault();
+            item.Title = movieItem.Title;
+            item.BoxOffice = movieItem.BoxOffice;
+            item.Active = movieItem.Active;
+            item.DateOfLauch = movieItem.DateOfLauch;
+            item.Genre = movieItem.Genre;
+            item.HasTeaser = movieItem.HasTeaser;
         }
     }
 }

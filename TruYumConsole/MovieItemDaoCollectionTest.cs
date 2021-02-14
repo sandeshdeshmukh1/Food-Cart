@@ -16,7 +16,7 @@ namespace TruYumConsole
         {
             MovieItemDaoCollection movieItemDao = new MovieItemDaoCollection();
             List<MovieItem> MovieItems = movieItemDao.GetMovieItemListAdmin();
-            Console.WriteLine("|  ID |  Name      |      Price  |  Active |  Date Of Launch |  Category  |  Delivery  |");
+            Console.WriteLine("ID    |  TITLE |  BOX OFFICE      |      ACTIVE  |    DATE OF LAUNCH |  GENRE  |  HAS TEASER  |");
             foreach (var item in MovieItems)
             {
 
@@ -32,7 +32,7 @@ namespace TruYumConsole
         {
             MovieItemDaoCollection movieItemDao = new MovieItemDaoCollection();
             List<MovieItem> MovieItems = movieItemDao.GetMovieItemListCustomer();
-            Console.WriteLine("|  ID |  Name      |      Price  |  Active |  Date Of Launch |  Category  |  Delivery  |");
+            Console.WriteLine("ID    |  TITLE |  BOX OFFICE      |      ACTIVE  |    DATE OF LAUNCH |  GENRE  |  HAS TEASER  |");
             foreach (var item in MovieItems)
             {
                 Console.WriteLine(item);
@@ -49,12 +49,13 @@ namespace TruYumConsole
             MovieItem MovieItem = new MovieItem()
             {
                 Id = 4,
-                Name = "Dosa",
-                Price = 29,
+                Title = "iron man",
+                BoxOffice = 2956645566,
                 Active = true,
                 DateOfLauch = new DateTime(2010, 12, 1, 4, 0, 15),
-                Category = "Starter",
-                FreeDelivery = true
+                Genre = "Sci-Fi",
+                HasTeaser = true
+
 
 
 
@@ -62,15 +63,12 @@ namespace TruYumConsole
 
             MovieItemDaoCollection movieItemDao = new MovieItemDaoCollection();
             movieItemDao.ModifyMovieItem(MovieItem);
-            Console.WriteLine("|  ID |  Name      |      Price  |  Active |  Date Of Launch |  Category  |  Delivery  |");
-            //Console.WriteLine(movieItemDao.GetMovieItem(MovieItem.Id));
-            Console.WriteLine(movieItemDao.GetMenu(MovieItem.Id));
+            Console.WriteLine("ID    |  TITLE |  BOX OFFICE      |      ACTIVE  |    DATE OF LAUNCH |  GENRE  |  HAS TEASER  |");
 
-            //MovieItem MovieItem;
-            //movieItemDaoCollection movieItemDaoCollection = new movieItemDaoCollection();
-            //MovieItem = movieItemDaoCollection.MovieItemList[1];
-            //movieItemDaoCollection.ModifyMovieItem(MovieItem);
-            //movieItemDaoCollection.GetMovieItem(MovieItem.Id);
+            Console.WriteLine(movieItemDao.GetMovie(MovieItem.Id));
+
+            
         }
     }
+
 }

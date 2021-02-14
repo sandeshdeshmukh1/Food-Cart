@@ -13,11 +13,11 @@ namespace TruYumConsole
             
             MovieItemDaoCollectionTest movieItemDaoCollectionTest = new MovieItemDaoCollectionTest();
             Console.WriteLine();
-            Console.WriteLine("***************************-------------MENU LIST ADMIN---------*******************************");
+            Console.WriteLine("***************************-------------MOVIE LIST ADMIN---------*******************************");
             Console.WriteLine();
             movieItemDaoCollectionTest.TestGetMovieItemListAdmin();
             Console.WriteLine();
-            Console.WriteLine("***************************----------MENU LIST CUSTOMER---------*******************************");
+            Console.WriteLine("***************************----------MOVIE LIST CUSTOMER---------*******************************");
             Console.WriteLine();
             movieItemDaoCollectionTest.TestGetMovieItemListCustomer();
             Console.WriteLine();
@@ -31,13 +31,13 @@ namespace TruYumConsole
 
 
             FavoriteDaoCollectionTest FavoriteDaoCollectionTest = new FavoriteDaoCollectionTest();
-            Console.WriteLine("*************************-------------------Favorite ITEMS-------------*****************************");
+            Console.WriteLine("*************************-------------------FAVORITES ITEMS-------------*****************************");
             Console.WriteLine();
 
             FavoriteDaoCollectionTest.TestAddFavoriteItem();
             
             FavoriteDaoCollectionTest.TestRemoveFavoriteItem();
-            Console.WriteLine("|  ID |  Name      |      Price  |  Active |  Date Of Launch |  Category  |  Delivery  |");
+            Console.WriteLine("|  ID |  TITLE      |      BOX OFFICE  |  Active |  Date Of Launch |  GENRE  |  HAS TEASER  |");
             FavoriteDaoCollectionTest.TestGetAllFavoriteItems();
             Console.WriteLine();
             Console.WriteLine("************************************************************************************************");

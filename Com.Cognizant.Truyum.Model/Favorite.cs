@@ -9,12 +9,12 @@ namespace Com.Cognizant.Truyum.Model
     public class Favorite
     { 
         
-        private List<MovieItem> MovieItemList;
+        static List<MovieItem> movieItemList;
 
         public List<MovieItem> MovieItemList
         {
-            get { return MovieItemList; }
-            set { MovieItemList = value; }
+            get { return movieItemList; }
+            set { movieItemList = value; }
         }
 
         private double total;
@@ -28,9 +28,9 @@ namespace Com.Cognizant.Truyum.Model
         {
         }
 
-        public Favorite(List<MovieItem> MovieItemList, double total)
+        public Favorite(List<MovieItem> movieItemList, double total)
         {
-            MovieItemList = MovieItemList;
+            MovieItemList = movieItemList;
             Total = total;
         }
 
