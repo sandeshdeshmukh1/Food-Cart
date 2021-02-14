@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Com.Cognizant.Truyum.Dao
 {
-    public class CartEmptyException: Exception
+    public class FavoriteEmptyException: Exception
     {
-        public CartEmptyException(string message) : base(message)
+        public FavoriteEmptyException(string message) : base(message)
         {
             
 

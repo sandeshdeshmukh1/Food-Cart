@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartDaoCollection.cs" />
-    <Compile Include="CartEmptyException.cs" />
-    <Compile Include="ICartDao.cs" />
-    <Compile Include="MenuItemDaoCollection.cs" />
-    <Compile Include="IMenuItemDao.cs" />
+    <Compile Include="FavoriteDaoCollection.cs" />
+    <Compile Include="FavoriteEmptyException.cs" />
+    <Compile Include="IFavoriteDao.cs" />
+    <Compile Include="MovieItemDaoCollection.cs" />
+    <Compile Include="IMovieItemDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

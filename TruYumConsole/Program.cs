@@ -11,34 +11,34 @@ namespace TruYumConsole
         static void Main(string[] args)
         {
             
-            MenuItemDaoCollectionTest menuItemDaoCollectionTest = new MenuItemDaoCollectionTest();
+            MovieItemDaoCollectionTest movieItemDaoCollectionTest = new MovieItemDaoCollectionTest();
             Console.WriteLine();
             Console.WriteLine("***************************-------------MENU LIST ADMIN---------*******************************");
             Console.WriteLine();
-            menuItemDaoCollectionTest.TestGetMenuItemListAdmin();
+            movieItemDaoCollectionTest.TestGetMovieItemListAdmin();
             Console.WriteLine();
             Console.WriteLine("***************************----------MENU LIST CUSTOMER---------*******************************");
             Console.WriteLine();
-            menuItemDaoCollectionTest.TestGetMenuItemListCustomer();
+            movieItemDaoCollectionTest.TestGetMovieItemListCustomer();
             Console.WriteLine();
             Console.WriteLine("*************************-------------RECENTLY MODIFIED -----------*****************************");
             Console.WriteLine();
-            menuItemDaoCollectionTest.TestModifyMenuItem();
+            movieItemDaoCollectionTest.TestModifyMovieItem();
             Console.WriteLine();
-            menuItemDaoCollectionTest.TestGetMenuItemListAdmin();
+            movieItemDaoCollectionTest.TestGetMovieItemListAdmin();
             Console.WriteLine();
-            Console.WriteLine();
-
-
-            CartDaoCollectionTest cartDaoCollectionTest = new CartDaoCollectionTest();
-            Console.WriteLine("*************************-------------------CART ITEMS-------------*****************************");
             Console.WriteLine();
 
-            cartDaoCollectionTest.TestAddCartItem();
+
+            FavoriteDaoCollectionTest FavoriteDaoCollectionTest = new FavoriteDaoCollectionTest();
+            Console.WriteLine("*************************-------------------Favorite ITEMS-------------*****************************");
+            Console.WriteLine();
+
+            FavoriteDaoCollectionTest.TestAddFavoriteItem();
             
-            cartDaoCollectionTest.TestRemoveCartItem();
+            FavoriteDaoCollectionTest.TestRemoveFavoriteItem();
             Console.WriteLine("|  ID |  Name      |      Price  |  Active |  Date Of Launch |  Category  |  Delivery  |");
-            cartDaoCollectionTest.TestGetAllCartItems();
+            FavoriteDaoCollectionTest.TestGetAllFavoriteItems();
             Console.WriteLine();
             Console.WriteLine("************************************************************************************************");
             Console.ReadKey();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Com.Cognizant.Truyum.Model
 {
-    public class MenuItem
+    public class MovieItem
     {
 
         private long id;
@@ -65,11 +65,11 @@ namespace Com.Cognizant.Truyum.Model
             set { freeDelivery = value; }
         }
 
-        public MenuItem()
+        public MovieItem()
         {
         }
 
-        public MenuItem(long id, string name, float price, bool active, DateTime dateOfLaunch, string category, bool freeDelivery)
+        public MovieItem(long id, string name, float price, bool active, DateTime dateOfLaunch, string category, bool freeDelivery)
         {
             Id = id;
             Name = name;

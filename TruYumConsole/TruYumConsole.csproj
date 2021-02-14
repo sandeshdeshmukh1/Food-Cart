@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartDaoCollectionTest.cs" />
-    <Compile Include="MenuItemDaoCollectionTest.cs" />
+    <Compile Include="FavoriteDaoCollectionTest.cs" />
+    <Compile Include="MovieItemDaoCollectionTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

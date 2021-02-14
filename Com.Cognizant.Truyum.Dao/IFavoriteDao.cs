@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Com.Cognizant.Truyum.Dao
 {
-    interface ICartDao
+    interface IFavoriteDao
     {
-        void AddCartItem(long userId, long menuItemId);
-        Cart GetAllCartItems(long userId);  
-        void RemoveCartItem(long userId, long productId);
+        void AddFavoriteItem(long userId, long MovieItemId);
+        Favorite GetAllFavoriteItems(long userId);  
+        void RemoveFavoriteItem(long userId, long productId);
     }
 }

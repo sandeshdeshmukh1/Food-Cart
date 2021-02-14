@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Com.Cognizant.Truyum.Model
 {
-    public class Cart
+    public class Favorite
     { 
         
-        private List<MenuItem> menuItemList;
+        private List<MovieItem> MovieItemList;
 
-        public List<MenuItem> MenuItemList
+        public List<MovieItem> MovieItemList
         {
-            get { return menuItemList; }
-            set { menuItemList = value; }
+            get { return MovieItemList; }
+            set { MovieItemList = value; }
         }
 
         private double total;
@@ -24,13 +24,13 @@ namespace Com.Cognizant.Truyum.Model
             get { return total; }
             set { total = value; }
         }
-        public Cart()
+        public Favorite()
         {
         }
 
-        public Cart(List<MenuItem> menuItemList, double total)
+        public Favorite(List<MovieItem> MovieItemList, double total)
         {
-            MenuItemList = menuItemList;
+            MovieItemList = MovieItemList;
             Total = total;
         }
 
